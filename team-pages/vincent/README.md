@@ -13,3 +13,17 @@ This document outline is adopted from Fjorge Front-End-Learning for Beginners
 - [CSS](https://www.w3schools.com/css/default.asp)
 - [Javascript](https://www.w3schools.com/js/default.asp)
 - [Slick Slider](https://kenwheeler.github.io/slick/)
+
+## Resources
+### Downloads
+- [Design reference](https://xd.adobe.com/view/d18f336f-9717-4ea4-a962-897462c2c80e-84dc/grid/)
+
+## Learning
+### What done means
+- There is an entry level understanding of the fundamentals of the following:
+  - HTML
+  - CSS
+  - Javascript
+- The Front End Test is incrementally worked on and reviewed by a team mate that has advanced Front End capabilities
+- The Front End Test is finalized and approved as completed by a team mate with advanced Front End capabilities
+- Web page matches the design provide for desktop and mobile
