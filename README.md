@@ -31,6 +31,7 @@ Create a new branch for your work. Replace your-branch-name with a descriptive n
 **Work on Your Page**
 Open the project in your code editor and navigate to the `team-pages` directory. 
 Choose the landing page you are assigned to work on (e.g., landing1.html, landing2.html, or landing3.html) and start making your changes.
+Verify your landing page in the checklist [`checklist.txt`]. If you are not in the list, follow the trend and assign to yourself a landing page.
 
 **Add and Commit Your Changes**
 After making changes, add your changes to the staging area and commit them with a descriptive message:
