@@ -26,3 +26,21 @@ cd SideCodeTeam
 **Create a Branch**
 Create a new branch for your work. Replace your-branch-name with a descriptive name for your branch (e.g., [your-name]-page):
 ```git checkout -b your-branch-name```
+
+
+**Work on Your Page**
+Open the project in your code editor and navigate to the `team-pages` directory. 
+Choose the landing page you are assigned to work on (e.g., landing1.html, landing2.html, or landing3.html) and start making your changes.
+
+**Add and Commit Your Changes**
+After making changes, add your changes to the staging area and commit them with a descriptive message:
+```
+git add .
+git commit -m "Descriptive message about your changes"
+```
+
+**Push Your Branch**
+```git push origin your-branch-name```
+
+**Create a Pull Request**
+Go to the GitHub repository in your web browser and create a pull request for your branch. This will allow your changes to be reviewed and merged into the main branch.
