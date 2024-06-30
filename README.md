@@ -18,14 +18,11 @@ Follow these instructions to set up the project on your local computer and start
 **Clone the Repository**
 
    First, clone the repository to your local computer using the following command:
-
-    ```bash
-        git clone https://github.com/VincentSD/SideCodeTeam.git
-        cd SideCodeTeam
-    ```
+```
+git clone https://github.com/VincentSD/SideCodeTeam.git
+cd SideCodeTeam
+```
 
 **Create a Branch**
 Create a new branch for your work. Replace your-branch-name with a descriptive name for your branch (e.g., [your-name]-page):
-    ```bash
-        git checkout -b your-branch-name
-    ```
+```git checkout -b your-branch-name```
