@@ -10,26 +10,25 @@
     <link rel="icon" href="image/logo.png">
 
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 </head>
 <body>
-    <section class="header">
+    <section class="header" id="header">
         <nav>
             <a href="index.html">
                 <img  src="image/logo.png" alt="icon" class="logo-image" height="90" width="120" loading="lazy">
             </a>
-
-            <div class="navigation-icon">
-                <img width="64" height="64" src="https://img.icons8.com/ios-glyphs/30/xbox-menu.png" alt="xbox-menu"/>
-                <a  href="https://icons8.com/icon/80105/nav"></a><a href="https://icons8.com"></a>
+         
+            <div class="navigation-icon" id="menuIcon">
+                <i class="fa-solid fa-bars-staggered fa-2xl" ></i>
                 
             </div>
 
-            <div class="nav_links">
+            <div class="nav_links" id="navMenu">
                 <ul>
                     <li><a href="#">Work</a></li>
                     <li><a href="#">About</a></li>
@@ -38,17 +37,25 @@
                 </ul>
             </div>
         </nav>
-
+        <!-- <div class="slider-container">
+            <div class="slider" id="slider2">
+                <img src="/SideCodeTeam/team-pages/Quaigraine/image/slide-2.png" alt="Image 1">
+            </div>
+        </div> -->
+        <!-- Slider Container -->
+    
         <div class="textbox">
             <h1>We never stop looking <br> for great talent.</h1>
-            <a href="#" class="learn-more"><strong>LEARN MORE  &nbsp;&nbsp;<span>&gt;</span>&nbsp;&nbsp;</strong></a>
+            <a href="#" class="learn-more"><strong>LEARN MORE  &gt;</strong></a>
         </div>
 
         
         <div class="navigation">
-            <button class="prev">&#10094;</button>
-            <button class="next"> &#10095;</button>
+            <button onclick="changeBackground('/SideCodeTeam/team-pages/Quaigraine/image/slide-1.png')" class="prev" id="prev">&#10094;</button>
+            <button onclick="changeBackground('/SideCodeTeam/team-pages/Quaigraine/image/slide-2.png')" class="next" id="next"> &#10095;</button>
         </div>
+
+        
     </section>
 
     <section class="iconbox">

@@ -127,21 +127,16 @@ nav {
     flex-direction:column;
     text-transform: lowercase;
     transition: opacity 0.5s ease-in-out;
-    opacity: 0;
+    opacity: 1;
+}
+.navigation-icon{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 600px;
 }
 
-.textbox {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    margin-left: 600px;
-    height: 70vh;
-    flex-direction:column;
-    text-transform: lowercase;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-}
 
 
 .textbox h1 {
@@ -172,7 +167,9 @@ nav {
     font-size: larger;
 
 }
-
+.textbox.slide-2 {
+    display: none;
+}
 
 
 .section-title{
@@ -238,120 +235,242 @@ nav {
     }
 
 
+    @media (min-width: 1200px) {
+        /* Styles for large screens */
+        .navigation-icon{
+            display: none;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+        /* Styles for tablets */
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            background-image: url(/SideCodeTeam/team-pages/Quaigraine/image/slide-1-mobile.png);
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+        nav{
+            background-color: #014152;
+            height: 74px;
+        }
+        /* .nav_links ul{
+            display: none;
+        } */
+        .logo-image{
+            height: 47px;
+            width: 69px;
+        }
+        /* .navigation-icon{
+            color: white;
+        } */
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
 
-    .textbox.slide-2 {
-        margin-left: 900px;
-    }
+header {
+    position: relative;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.navigation-icon {
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
 
-   @media screen and (min-width:1190px){
-    .navigation-icon{
-        display: none;
-    }
-   }
-  
-  @media screen and (max-width: 1190px){
-    .navigation-icon{
-        display: none;
-    }
-    .learn-more{
-        display: flex;
-        
-        width: 80px;
-        flex-wrap: nowrap;
-        padding: 10px 20px;
-        font-size: 14px;
-        margin-left: 90px;
-    }
-    .textbox h1{
-        font-size: 3em;
-    }
-    .learn-more{
-        margin-left: 100px;
-    }
-    .navigation{
-        margin-right: 90px;
-    }
-  }
+.nav_links {
+    margin-top: 100px;
+    z-index: 10;
+    position: fixed;
+    inset: 0;
+    padding: 4rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    background-color: #014152;
+    margin-left: -100px;
+    display: none; /* Hidden by default */
+}
 
-  @media screen and (max-width:1060px){
-    .navigation-icon{
-        display: none;
-    }
-    .textbox h1{
-        font-size: 2.5em;
-    }
-    .learn-more{
-        margin-left: 160px;
-    }
-    .navigation{
-        margin-right: 70px;
-    }
-  }
-  @media screen and (max-width:1000px){
-    .navigation-icon{
-        display: none;
-    }
-    .textbox{
-       margin-left: 390px;
-    }
+.nav_links ul {
+    font-weight: bolder;
+    font-size:larger;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-    .textbox h1{
-        font-size: 2.2em;
-    }
+.nav_links li {
+    text-decoration: none;
+    padding: 10px;
 
-    .learn-more{
-        margin-left: 200px;
-    }
-  }
+}
 
-  @media screen and (max-width:968px){
+.nav_links li a {
     
-    .textbox{
-        margin-left: 400px;
-    }
-    .textbox h1{
-        font-size: 2.3em;
-    }
-    .learn-more{
-        margin-left: 190px;
-    }
-  }
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+}
 
-  @media screen and (max-width:910px){
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+        }
+        
+        .slider {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slider img {
+            width: 100%;
+            display: block;
+        }
+        
+        
+        .textbox{
+            margin-left: 100px;
+        }
+        .icon-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            padding: 100px 80px;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .learn-more{
+            width: 110px;
+            margin-left: 300px;
+        }
+        .textbox.slide-2 {
+            display: none;
+        }
+
+    }
+
+    @media (max-width: 767px) {
+    /* Styles for smartphones */
     body{
-        margin-top: 0;
-        margin-bottom: 0;
         margin: 0;
         padding: 0;
     }
-    nav{
+    /*new modfications */
+    .navigation-icon {
         display: flex;
-        background-color: #014152;
+        margin-left: -50px;
+        cursor: pointer;
+        font-size: 24px;
+    }
+    
+    .nav_links {
+        margin: 0;
+        padding: 0;
+        margin-top: 60px;
+        z-index: 10;
+        position: fixed;
+        inset: 0;
+        padding: 4rem;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
-        pointer-events: none;
+        background-color: #014152;
+        margin-left: -100px ;
+        display: none; /* Hidden by default */
     }
-
-    .logo-image{
-        margin-right: 650px;
-    }
-    .nav_links{
-        display: none;
-        cursor: not-allowed;
-        
-    }
-    .textbox{
+    
+    .nav_links ul {
         align-items: center;
         justify-content: center;
-        margin-left: 100px;
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
     }
-
-
     
-    .icon-grid{
+    .nav_links li {
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    .nav_links li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+  
+
+    /*this end here */
+    .header{
+        background-image: url(/SideCodeTeam/team-pages/Quaigraine/image/slide-1-mobile.png);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+    }
+    .logo-image{
+        height: 47px;
+        width: 69px;
+        margin-right: 290px;
+    }
+    nav{
+        background-color: #014152;
+    }
+    /* .nav_links{
+        display: none;
+    } */
+    /* .navigation-icon{
+        display: flex;
+        margin-left: -50px;
+    } */
+    .textbox{
+        margin-left: 200px;
+    }
+    .textbox h1{
+        width: 250px;
+        font-size: 45px;
+        margin-right: 130px;
+    }
+    .learn-more{
+        margin-right: 220px;
+        width: 90px;
+    }
+    .navigation{
+        margin-right: 100px;
+    }
+    .icon-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(8, auto); 
+        gap: 10px; 
+    }
+    .textbox.slide-2 {
+        display: none;
     }
 }

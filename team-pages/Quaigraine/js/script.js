@@ -1,65 +1,31 @@
-let currentIndex = 0;
-const images = [
-  'image/slide-1.png',
-  'image/slide-2.png',
-];
+function changeBackground(imagename) {
+  var header = document.getElementById('header');
+  header.style.backgroundImage = 'url(' + imagename + ')';
 
-const header = document.querySelector('.header');
-const textbox = document.querySelector('.textbox');
+  var textbox = document.querySelector('.textbox');
 
-document.querySelector('.next').addEventListener('click', () => {
-  changeSlide(1);
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-  changeSlide(-1);
-});
-
-function changeSlide(direction) {
-  const newIndex = currentIndex + direction;
-
-  // Wrap around at the ends of the array
-  currentIndex = newIndex >= images.length ? 0 : newIndex < 0 ? images.length - 1 : newIndex;
-
-  // Fade out textbox
-  textbox.style.transition = 'opacity 0.5s ease';
-  textbox.style.opacity = '0';
-
-  // Change header background image after fade out
-  setTimeout(() => {
-    header.style.transition = 'background-image 0.5s ease';
-    header.style.backgroundImage = `url(${images[currentIndex]})`;
-    
-    // Fade in textbox
-    setTimeout(() => {
-      updateClasses();
-      textbox.style.transition = 'opacity 0.5s ease';
-      textbox.style.opacity = '1';
-    }, 100);
-  }, 500);
-}
-
-function updateClasses() {
-  // Remove any existing slider-specific classes
-  header.classList.remove('slide-1', 'slide-2');
+  // Remove any existing slide-specific classes
   textbox.classList.remove('slide-1', 'slide-2');
 
-  // Add the class for the current slide
-  header.classList.add(`slide-${currentIndex + 1}`);
-  textbox.classList.add(`slide-${currentIndex + 1}`);
-
-  // Logging to debug
-  console.log(`Current Index: ${currentIndex}`);
-  console.log(`Header Classes: ${header.className}`);
-  console.log(`Textbox Classes: ${textbox.className}`);
+  // Add class based on image name
+  if (imagename.includes('slide-1.png')) {
+      // Default styles for slide 1
+      textbox.classList.add('slide-1');
+  } else if (imagename.includes('slide-2.png')) {
+      // Styles specific to slide 2
+      textbox.classList.add('slide-2');
+  }
 }
 
-// Initial setup
-header.style.backgroundImage = `url(${images[0]})`;
-updateClasses();
+document.addEventListener('DOMContentLoaded', () => {
+  const menuIcon = document.getElementById('menuIcon');
+  const navMenu = document.getElementById('navMenu');
 
-// Fade in textbox on initial load
-setTimeout(() => {
-  textbox.style.transition = 'opacity 0.5s ease';
-  textbox.style.opacity = '1';
-}, 100);
+  menuIcon.addEventListener('click', () => {
+      if (navMenu.style.display === 'none' || navMenu.style.display === '') {
+          navMenu.style.display = 'block';
+      } else {
+          navMenu.style.display = 'none';
+      }
+  });
+});
