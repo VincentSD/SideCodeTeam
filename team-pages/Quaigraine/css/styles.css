@@ -1,505 +1,496 @@
 @font-face {
-    font-family: "MyCustomFont";
-    src: url("/SideCodeTeam/team-pages/Quaigraine/fonts/Rift/Fort%20Foundry%20-%20Rift-Bold.otf")
-      format("opentype");
-    font-weight: bold;
-    font-style: normal;
+  font-family: "MyCustomFont";
+  src: url("/SideCodeTeam/team-pages/Quaigraine/fonts/Rift/Fort%20Foundry%20-%20Rift-Bold.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("/SideCodeTeam/team-pages/Quaigraine/fonts/Rift/Fort%20Foundry%20-%20Rift-Light.otf")
+    format("opentype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("/SideCodeTeam/team-pages/Quaigraine/fonts/Rift/Fort%20Foundry%20-%20Rift-Medium.otf")
+    format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("/SideCodeTeam/team-pages/Quaigraine/fonts/Rift/Fort%20Foundry%20-%20Rift-Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+  font-family: "MyCustomFont", sans-serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../image/slide-1.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.logo-image {
+  height: 47px;
+  width: 69px;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav_links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  margin-left: 60px;
+}
+.nav_links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 450;
+}
+
+.nav_links ul li ::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #014152;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav_links ul li:hover ::after {
+  width: 100%;
+  align-items: center;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  margin-right: 250px;
+}
+
+.navigation button {
+  border: none;
+  color: #014152;
+  padding: 10px;
+  cursor: pointer;
+  height: 5em;
+  width: 8em;
+  transition: background-color 0.3s;
+  margin-bottom: 30px;
+}
+
+.navigation button:hover {
+  background-color: #014152;
+  color: white;
+}
+
+.navigation.slide-2 button {
+  background-color: #014152;
+  color: white;
+}
+
+.navigation.slide-2 button:hover {
+  background-color: white;
+  color: #014152;
+}
+
+.textbox {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 600px;
+  height: 70vh;
+  flex-direction: column;
+  text-transform: lowercase;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.navigation-icon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 600px;
+}
+
+.textbox h1 {
+  font-size: 4em;
+  color: #014152;
+  margin-bottom: 0.5em;
+}
+
+.learn-more {
+  display: flex;
+  padding: 10px 20px;
+  color: #014152;
+  background-color: white; /* Blue button */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-right: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: 0, 5s;
+}
+
+.learn-more:hover {
+  background-color: #014152;
+  color: white;
+}
+
+.learn-more span {
+  margin-left: 25px;
+  font-size: larger;
+}
+.textbox.slide-2 {
+  display: none;
+}
+
+.section-title {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.custom-line {
+  border: none;
+  height: 3px;
+  background-color: gray;
+  width: 1.2cm;
+  margin: 20px auto;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  padding: 100px 80px;
+  gap: 80px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.icon-box img {
+  width: 69px;
+  height: 72px;
+}
+
+.icon-box p {
+  margin-top: 10px;
+  font-size: 28px;
+  color: #014152;
+  font-weight: normal;
+}
+
+.footer1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #014152;
+  padding: 30px;
+}
+
+@media (min-width: 1200px) {
+  /* Styles for large screens */
+  .navigation-icon {
+    display: none;
   }
-  
-  @font-face {
-    font-family: "MyCustomFont";
-    src: url("/SideCodeTeam/team-pages/Quaigraine/fonts/Rift/Fort%20Foundry%20-%20Rift-Light.otf")
-      format("opentype");
-    font-weight: 300; /* Light */
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "MyCustomFont";
-    src: url("/SideCodeTeam/team-pages/Quaigraine/fonts/Rift/Fort%20Foundry%20-%20Rift-Medium.otf")
-      format("opentype");
-    font-weight: 500; /* Medium */
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "MyCustomFont";
-    src: url("/SideCodeTeam/team-pages/Quaigraine/fonts/Rift/Fort%20Foundry%20-%20Rift-Regular.otf")
-      format("opentype");
-    font-weight: normal;
-    font-style: normal;
-  }
-  
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* Styles for tablets */
   body {
-    background-color: white;
-    font-family: "MyCustomFont", sans-serif;
-    font-size: 18px;
     padding: 0;
     margin: 0;
   }
-  
+  .custom-line {
+    background-color: orangered;
+  }
   .header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: url(../image/slide-1.png);
-    background-position: center;
+    background-image: url(/SideCodeTeam/team-pages/Quaigraine/image/slide-1-mobile.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
     background-size: cover;
-    position: relative;
-    transition: background-image 0.5s ease-in-out;
+    background-position: center;
   }
-
-  .fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+  nav {
+    background-color: #014152;
+    height: 74px;
   }
-  
-  .fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-  }
- 
-  
- .logo-image{
+  /* .nav_links ul{
+              display: none;
+          } */
+  .logo-image {
     height: 47px;
     width: 69px;
- }
-  
-  nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: center;
-    align-items: center;
   }
-  
-  .nav_links {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .nav_links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px 20px;
-    position: relative;
-    margin-left: 60px;
-  }
-  .nav_links ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 450;
-  }
-  
-  .nav_links ul li ::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background: #014152;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-  }
-  .nav_links ul li:hover ::after {
-    width: 100%;
-    align-items: center;
-  }
-  
-  .navigation {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
-    margin-right: 250px;
-  }
-  
-  .navigation button {
-    border: none;
-    color: #014152;
-    padding: 10px;
-    cursor: pointer;
-    height: 5em;
-    width: 8em;
-    transition: background-color 0.3s;
-    margin-bottom: 30px;
-  }
-  
-  .navigation button:hover {
-    background-color: #014152;
-    color: white;
-  }
-  
-  .navigation.slide-2 button {
-    background-color: #014152;
-    color: white;
+  /* .navigation-icon{
+              color: white;
+          } */
+  body {
+    font-family: "MyCustomFont", sans-serif;
+    margin: 0;
   }
 
-  .navigation.slide-2 button:hover {
-    background-color: white;
-    color: #014152;
+  header {
+    position: relative;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation-icon {
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .nav_links {
+    margin-top: 100px;
+    z-index: 10;
+    position: fixed;
+    inset: 0;
+    padding: 4rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #014152;
+    margin-left: -100px;
+    display: none; /* Hidden by default */
+  }
+
+  .nav_links ul {
+    font-weight: bolder;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav_links li {
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  .nav_links li a {
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .slider {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slider img {
+    width: 100%;
+    display: block;
   }
 
   .textbox {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 600px;
-    height: 70vh;
-    flex-direction: column;
-    text-transform: lowercase;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
+    margin-left: 100px;
   }
-  .navigation-icon {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 600px;
-    
-  }
-  
   .textbox h1 {
-    font-size: 4em;
-    color: #014152;
-    margin-bottom: 0.5em;
+    font-size: 3.6em;
   }
-  
+  .section-title {
+    font-size: 20px;
+  }
+
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 100px 80px;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .icon-box p {
+    text-align: center;
+  }
   .learn-more {
-    display: flex;
-    padding: 10px 20px;
-    color: #014152;
-    background-color: white; /* Blue button */
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin-right: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    transition: 0, 5s;
-  }
-  
-  .learn-more:hover {
-    background-color: #014152;
-    color: white;
-  }
-  
-  .learn-more span {
-    margin-left: 25px;
-    font-size: larger;
+    width: 110px;
+    margin-left: 300px;
   }
   .textbox.slide-2 {
     display: none;
   }
-  
-  .section-title {
-    font-size: 28px;
-    text-align: center;
-    font-weight: bold;
-    justify-content: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
-  }
-  
-  .custom-line {
-    border: none;
-    height: 3px;
-    background-color: gray;
-    width: 1.2cm;
-    margin: 20px auto;
-  }
-  
-  .icon-grid {
+}
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
-    padding: 100px 80px;
-    gap: 80px;
-    max-width: 1600px;
-    margin: 0 auto;
+@media (max-width: 767px) {
+  /* Styles for smartphones */
+  body {
+    margin: 0;
+    padding: 0;
   }
-  
-  .icon-box {
+  .section-title {
+    font-size: 20px;
+  }
+  .custom-line {
+    background-color: orangered;
+  }
+  /*new modfications */
+  .navigation-icon {
+    display: flex;
+    margin-left: -50px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .nav_links {
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+    z-index: 10;
+    position: fixed;
+    inset: 0;
+    padding: 4rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #014152;
+    margin-left: -100px;
+    display: none; /* Hidden by default */
+  }
+
+  .nav_links ul {
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav_links li {
     padding: 10px;
-    background-color: #fff;
-    text-align: left;
+    text-decoration: none;
   }
-  
-  .icon-box img {
+
+  .nav_links li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /*this end here */
+  .header {
+    background-image: url(/SideCodeTeam/team-pages/Quaigraine/image/slide-1-mobile.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+  }
+  .logo-image {
+    height: 47px;
     width: 69px;
-    height: 72px;
+    margin-right: 290px;
   }
-  
-  .icon-box p {
-    margin-top: 10px;
-    font-size: 28px;
-    color: #014152;
-    font-weight: normal;
-  }
-  
-  .footer1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
+  nav {
     background-color: #014152;
-    padding: 30px;
   }
-  
-  @media (min-width: 1200px) {
-    /* Styles for large screens */
-    .navigation-icon {
-      display: none;
-    }
+
+  .textbox {
+    margin-left: 200px;
   }
-  @media (min-width: 768px) and (max-width: 1199px) {
-    /* Styles for tablets */
-    body {
-      padding: 0;
-      margin: 0;
-    }
-    .custom-line {
-      background-color: orangered;
-    }
-    .header {
-      background-image: url(/SideCodeTeam/team-pages/Quaigraine/image/slide-1-mobile.png);
-      background-repeat: no-repeat;
-      object-fit: cover;
-      background-size: cover;
-      background-position: center;
-    }
-    nav {
-      background-color: #014152;
-      height: 74px;
-    }
-    /* .nav_links ul{
-              display: none;
-          } */
-    .logo-image {
-      height: 47px;
-      width: 69px;
-    }
-    /* .navigation-icon{
-              color: white;
-          } */
-    body {
-      font-family: "MyCustomFont", sans-serif;
-      margin: 0;
-    }
-  
-    header {
-      position: relative;
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .navigation-icon {
-      color: white;
-      cursor: pointer;
-      font-size: 24px;
-    }
-  
-    .nav_links {
-      margin-top: 100px;
-      z-index: 10;
-      position: fixed;
-      inset: 0;
-      padding: 4rem;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: #014152;
-      margin-left: -100px;
-      display: none; /* Hidden by default */
-    }
-  
-    .nav_links ul {
-      font-weight: bolder;
-      font-size: larger;
-      align-items: center;
-      justify-content: center;
-      gap: 4rem;
-      display: flex;
-      flex-direction: column;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-  
-    .nav_links li {
-      text-decoration: none;
-      padding: 10px;
-    }
-  
-    .nav_links li a {
-      text-decoration: none;
-      color: white;
-      text-decoration: none;
-    }
-  
-    .slider-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
-      overflow: hidden;
-      display: flex;
-    }
-  
-    .slider {
-      min-width: 100%;
-      transition: transform 0.5s ease-in-out;
-    }
-  
-    .slider img {
-      width: 100%;
-      display: block;
-    }
-  
-    .textbox {
-      margin-left: 100px;
-    }
-    .textbox h1 {
-      font-size: 3.6em;
-    }
-    .section-title{
-        font-size: 20px;
-    }
-  
-    .icon-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-  
-      padding: 100px 80px;
-      gap: 80px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .icon-box p {
-      text-align: center;
-    }
-    .learn-more {
-      width: 110px;
-      margin-left: 300px;
-    }
-    .textbox.slide-2 {
-      display: none;
-    }
+  .textbox h1 {
+    width: 250px;
+    font-size: 45px;
+    margin-right: 130px;
   }
-  
-  @media (max-width: 767px) {
-    /* Styles for smartphones */
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    .section-title{
-        font-size: 20px;
-    }
-    .custom-line {
-      background-color: orangered;
-    }
-    /*new modfications */
-    .navigation-icon {
-      display: flex;
-      margin-left: -50px;
-      cursor: pointer;
-      font-size: 24px;
-    }
-  
-    .nav_links {
-      margin: 0;
-      padding: 0;
-      margin-top: 60px;
-      z-index: 10;
-      position: fixed;
-      inset: 0;
-      padding: 4rem;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: #014152;
-      margin-left: -100px;
-      display: none; /* Hidden by default */
-    }
-  
-    .nav_links ul {
-      align-items: center;
-      justify-content: center;
-      gap: 3rem;
-      display: flex;
-      flex-direction: column;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-  
-    .nav_links li {
-      padding: 10px;
-      text-decoration: none;
-    }
-  
-    .nav_links li a {
-      color: white;
-      text-decoration: none;
-    }
-  
-    /*this end here */
-    .header {
-      background-image: url(/SideCodeTeam/team-pages/Quaigraine/image/slide-1-mobile.png);
-      background-repeat: no-repeat;
-      object-fit: cover;
-      background-size: cover;
-      background-position: center;
-    }
-    .logo-image {
-      height: 47px;
-      width: 69px;
-      margin-right: 290px;
-    }
-    nav {
-      background-color: #014152;
-    }
-    /* .nav_links{
-          display: none;
-      } */
-    /* .navigation-icon{
-          display: flex;
-          margin-left: -50px;
-      } */
-    .textbox {
-      margin-left: 200px;
-    }
-    .textbox h1 {
-      width: 250px;
-      font-size: 45px;
-      margin-right: 130px;
-    }
-    .learn-more {
-      margin-right: 220px;
-      width: 90px;
-    }
-    .navigation {
-      margin-right: 10px;
-    }
-    .icon-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(8, auto);
-      gap: 10px;
-    }
-    .icon-box p {
-      text-align: center;
-    }
-    .textbox.slide-2 {
-      display: none;
-    }
+  .learn-more {
+    margin-right: 220px;
+    width: 90px;
   }
+  .navigation {
+    margin-right: 10px;
+  }
+  .icon-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    gap: 10px;
+  }
+  .icon-box p {
+    text-align: center;
+  }
+  .textbox.slide-2 {
+    display: none;
+  }
+}
