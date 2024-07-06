@@ -1,1 +1,56 @@
-/* Start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: ;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-image: url("../image/slide-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+}
+
+#menu-container {
+    border: 3px solid red; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-cta {
+    border: 4px solid green;
+    padding: .25rem;
+    width: 35%;
+    text-wrap: wrap;
+}
+
+main {
+    display: grid;
+    grid-gap: .125rem;
+    grid-template-columns: 4;
+}
+
+grid-b-item {
+    
+}
+
+footer {
+    text-align: center;
+}
