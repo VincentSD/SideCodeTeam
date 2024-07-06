@@ -1,0 +1,37 @@
+Task:
+    -- add the local fonts to tailwind `input.css` file so i can in the index.html
+
+suggestion:
+    -- you can `@font-face`
+
+current_code_example:
+    ```tailwindcss
+    @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Roboto.woff2) format('woff2');
+  }
+}
+    ```
+path: 
+    - 'team-pages/fafali/fonts/Rift/Fort Foundry - Rift-Bold.otf'
+    - 'team-pages/fafali/fonts/Rift/Fort Foundry - Rift-Light.otf'
+    - 'team-pages/fafali/fonts/Rift/Fort Foundry - Rift-Medium.otf'
+    - 'team-pages/fafali/fonts/Rift/Fort Foundry - Rift-Regular.otf'
+
+detail:
+    -- add the necessary style according to the file 
+    -- use simple alises that are easy to recall
+
+local_font: 
+    - 'Rift-Bold.otf'
+    - 'Rift-Light.otf'
+    - 'Rift-Medium.otf'
+    - 'Rift-regular.otf'
