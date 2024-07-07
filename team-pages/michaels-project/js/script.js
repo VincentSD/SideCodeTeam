@@ -1,4 +1,4 @@
-const mainEl = document.querySelector("main");
+const mainEl = document.querySelector(".main-container");
 
 const benefitsContentJson = [
     {
@@ -51,3 +51,16 @@ for(let content of benefitsContentJson){
     mainEl.append(newSectionEl);
 
 }
+
+// Slick slider
+$('.hero').slick({
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    adaptiveHeight: true,
+});

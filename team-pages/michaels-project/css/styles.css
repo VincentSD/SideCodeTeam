@@ -1,56 +1,85 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
-    --text-color: ;
+    --primary-color: rgba(41, 38, 55, 0.836);
+    --text-color: rgb(209, 205, 219);
+    --bg-color: rgb(255, 255, 255);
+    --color: rgba(238, 173, 32, 0.897);
+    --font: system-ui, "segoe ui", sans-serif;
 }
 
 body {
+    font-family: system-ui, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%;
     min-height: 100vh;
-    max-width: 100vw;
 }
 
 header {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    background-image: url("../image/slide-1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    grid-template-columns: 12;
+
+}
+
+#hero-container {
+
+}
+.slider-img {
     width: 100%;
-    height: 75vh;
 }
-.nav-link {
-    text-decoration: none;
-    color: var(--text);
+.slider-img img {
+    width: 100%;
 }
 
-#menu-container {
-    border: 3px solid red; 
+#cta-btn {
+    border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+    font-size: large;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: all .5s ease;
+    /* height:  */
 }
 
-.hero-cta {
-    border: 4px solid green;
-    padding: .25rem;
-    width: 35%;
-    text-wrap: wrap;
+#cta-btn > svg {
+    display: inline-block;
+    width: 1.25rem;
+
+}
+
+
+#cta-btn > span:hover {
+    margin-right: .25rem;
+    text-decoration: underline;
+   
+}
+
+#mobile-menu-icon {
+    /* display: ; */
+}
+
+#mobile-menu-icon > svg {
+    width: 100%;
 }
 
 main {
     display: grid;
-    grid-gap: .125rem;
-    grid-template-columns: 4;
+    background-color: var(--bg-color);
+
 }
 
-grid-b-item {
-    
-}
+
 
 footer {
-    text-align: center;
+    background-color: var(--primary-color);
+    display: grid;
+    place-items: center;
 }
+

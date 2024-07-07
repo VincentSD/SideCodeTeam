@@ -4,35 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="icon" href="./image/logo-alternate.png" type="image/png" />
     <title>fjorge | Home </title>
 </head>
 <body>
+    <!-- chevron right  -->
+     <!-- 
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+</svg>
+
+     -->
+
+    <!-- chevron left -->   
+    <!-- 
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 19.5-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+</svg>
+    -->
+
+    <!-- bars-3 -->
+    <!-- 
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"> 
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+    -->
+    <!-- close icon -->
+    <!-- 
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+    -->
     <header>
-            <div class="logo">
-                <img src="./image/logo.png" alt="fjorge logo" />
-            </div>
-            <nav id="link-container">
-                <a href="#" class="nav-link">Work</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Blog</a>
-                <a href="#" class="nav-link">Contact Us</a>
-            </nav>
-        <div class="hero-cta">
-            <h1>We never stop looking <br />for great talent.</h1>
-            <div class="cta-btn">
-                <input type="button" value="LEARN MORE" />
-                <span id="right-arrow"></span>
-            </div>
+        <section id="#hero-container">
+            <section class="slider-img" id="slider-img-one" >
+                <img src="./image/slide-1.png" alt="">
+                <h1>We never stop looking <br />for great talent.</h1>
+                <button id="cta-btn">
+                    <span>Learn More</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </section>
+            <section class="slider-img" id="slider-img-2">
+                <img src="./image/slide-2.png" alt="">
+            </section>
+        </section>
+        <div id="logo">
+            <img src="./image/logo.png" alt="fjorge logo" />
         </div>
+        <div id="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+        <nav id="link-container">
+            <a href="#" class="nav-link">Work</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Blog</a>
+            <a href="#" class="nav-link">Contact Us</a>
+        </nav>
     </header>
     <main>
-
+        <div id="benefits-title">
+            <h2>Benefits of joining the team</h2>
+            <svg id="underline-bar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+            </svg>
+        </div>
+        <div class="main-container">
+    </div>
     </main>
     <footer>
         <img src="./image/logo-alternate.png" alt="fjorge logo"/>
     </footer>
 
-    <script src="./js/script.js" />
+    <script src="./js/script.js"></script> 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 </html>
