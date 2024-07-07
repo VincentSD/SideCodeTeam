@@ -1,52 +1,30 @@
-# SideCodeTeam
+## References
+This document outline is adopted from Fjorge Front-End-Learning for Beginners
 
-Welcome to the SideCodeTeam project! 
-This project is designed to help you learn and practice web development skills, including Git, HTML, CSS, and JavaScript. 
-You will be working on different landing pages and collaborating with your teammates.
+### Basic Learning Videos
+- [HTML](https://www.youtube.com/watch?v=FQdaUv95mR8) (39 mins)
+- [CSS](https://www.youtube.com/watch?v=1PnVor36_40) (24 mins)] 
+- [CSS Flexbox](https://www.youtube.com/watch?v=fYq5PXgSsbE) (15 mins)
+- [Javascript](https://www.youtube.com/watch?v=W6NZfCO5SIk) (48 mins)
+- [Media Query](https://www.youtube.com/watch?v=yU7jJ3NbPdA) (responsive development) (7 mins)
 
-## Getting Started
+### Basic Tutorials/Documentation
+- [HTML](https://www.w3schools.com/html/default.asp)
+- [CSS](https://www.w3schools.com/css/default.asp)
+- [Javascript](https://www.w3schools.com/js/default.asp)
+- [Slick Slider](https://kenwheeler.github.io/slick/)
 
-Follow these instructions to set up the project on your local computer and start working on your assigned landing page.
+## Resources
+### Downloads
+- [Design reference](https://xd.adobe.com/view/d18f336f-9717-4ea4-a962-897462c2c80e-84dc/grid/)
+- Request to be added to the project board to access project tickets and milestones that will guide you to completion of this project
 
-### Prerequisites
-
-- [Git](https://git-scm.com/) installed on your computer
-- A code editor (e.g., [VS Code](https://code.visualstudio.com/))
-
-## Instructions
-
-### Clone the Repository
-
-   First, clone the repository to your local computer using the following command:
-```
-git clone https://github.com/VincentSD/SideCodeTeam.git
-cd SideCodeTeam
-```
-
-### Create a Branch
-Create a new branch for your work. Replace your-branch-name with a descriptive name for your branch (e.g., [your-name]-page):
-```git checkout -b your-branch-name```
-
-
-### Work on Your Page
-#### Task 1
-- Open the project in your code editor and navigate to the `team-pages` directory. 
-- Choose the landing page you are assigned to work on (e.g., landing1.html, landing2.html, or landing3.html) and start making your changes.
-- Verify your landing page in the checklist [`checklist.txt`]. If you are not in the list, follow the trend and assign to yourself a landing page.
-
-#### Task 2
-- Duplicate the subfolder called `vincent` in the `team-pages` folder and rename it the duplicate to your name
-- Review the `README` in your new project folder and follow the directions in it
-
-### Add and Commit Your Changes**
-After making changes, add your changes to the staging area and commit them with a descriptive message:
-```
-git add .
-git commit -m "Descriptive message about your changes"
-```
-
-### Push Your Branch**
-```git push origin your-branch-name```
-
-### Create a Pull Request**
-Go to the GitHub repository in your web browser and create a pull request for your branch. This will allow your changes to be reviewed and merged into the main branch.
+## Learning
+### What done means
+- There is an entry level understanding of the fundamentals of the following:
+  - HTML
+  - CSS
+  - Javascript
+- The Front End Test is incrementally worked on and reviewed by a team mate that has advanced Front End capabilities
+- The Front End Test is finalized and approved as completed by a team mate with advanced Front End capabilities
+  - Web page matches the design provide for desktop and mobile
