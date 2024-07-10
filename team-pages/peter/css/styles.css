@@ -1,0 +1,112 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: url(/image/slide-1.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 84vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; 
+}
+
+.textbox {
+    position: absolute;
+    top: 5cm;
+    right: 20px;
+    text-align: right;
+    padding: 20px;
+    background: none; 
+}
+
+.textbox h1 {
+    font-size: 40px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: rgb(4, 46, 46); 
+}
+
+.benefits {
+    text-align: center;
+    margin: 20px 0;
+    color: rgb(4, 46, 46); 
+}
+
+.benefits h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.benefit-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px 10px;
+    padding: 10px 120px 20px;
+}
+
+.benefit-item {
+    flex: 1 1 calc(25% - 40px); /* 25% width minus the gap */
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+}
+
+.benefit-item img {
+    max-width: 100px; 
+    margin-bottom: 20px;
+}
+
+.benefit-item h4 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: rgb(4, 46, 46); /* Ensure text color matches the textbox */
+}
+
+footer {
+    margin-top: 90px;
+    text-align: center;
+    padding: 20px;
+    background-color:rgb(4, 46, 46) ; 
+}
+
+footer img {
+    max-width: 150px;
+}
