@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./production/production.css" />
+    <title>SideCodeTeam</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"
+    ></script>
+  </head>
+
+  <body class="relative font-normal font-riftR no-scrollbar">
+    <!-- ####################################################################################################### -->
+    <wrapper-head>
+      <!-- header section begins here -->
+      <header
+        class="md:overflow-hidden md:overscroll-none md:z-10 md:absolute md:inset-0 flex justify-between md:bg-transparent max-md:bg-gradient-to-r max-md:from-primary max-md:to-secondary md:px-[4rem] md:py-6 max-md:p-4 w-full h-20 cursor-pointer"
+      >
+        <logo-img class="cursor-pointer">
+          <img src="./image/logo.png" alt="fjorge logo" />
+        </logo-img>
+
+        <!-- desktop navbar begins here -->
+        <nav class="max-md:hidden">
+          <ul
+            class="flex justify-between gap-8 font-normal font-riftR text-lg text-tertiary"
+          >
+            <li
+              class="hover:scale-110 hover:drop-shadow-lg font-bold transition duration-300 ease-in-out"
+            >
+              Work
+            </li>
+            <li
+              class="hover:scale-110 hover:drop-shadow-lg hover:font-bold transition duration-300 ease-in-out"
+            >
+              About
+            </li>
+            <li
+              class="hover:scale-110 hover:drop-shadow-lg hover:font-bold transition duration-300 ease-in-out"
+            >
+              Blog
+            </li>
+            <li
+              class="hover:scale-110 hover:drop-shadow-lg hover:font-bold transition duration-300 ease-in-out"
+            >
+              Contact Us
+            </li>
+          </ul>
+        </nav>
+        <!-- desktop navbar ends here  -->
+
+        <!-- mobile navbar begins here  -->
+        <mobile-nav
+          class="md:hidden cursor-pointer"
+          x-data="{showMenu : false}"
+        >
+          <span
+            @click="showMenu = !showMenu"
+            class="p-4 text-4xl text-tertiary"
+          >
+            &#9776;
+          </span>
+
+          <menu-popUp
+            x-cloak
+            x-show="showMenu"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+            class="z-20 fixed inset-0 bg-gradient-to-b from-primary to-secondary p-2 w-full h-full overflow-hidden overscroll-none"
+          >
+            <menu-icon
+              class="flex justify-between p-2 text-tertiary cursor-pointer"
+            >
+              <logo-img>
+                <img src="./image/logo.png" alt="fjorge logo" />
+              </logo-img>
+              <span @click="showMenu=!showMenu" class="text-5xl">x</span>
+            </menu-icon>
+
+            <ul
+              class="flex flex-col justify-center items-center gap-8 w-full h-[28rem] font-riftL font-thin text-3xl text-tertiary"
+            >
+              <li>Work</li>
+              <li>About</li>
+              <li>Blog</li>
+              <li>Contact Us</li>
+            </ul>
+          </menu-popUp>
+        </mobile-nav>
+        <!-- mobile navbar ends here  -->
+      </header>
+      <!-- header section ends here  -->
+      <!-- ########################################################################################################## -->
+
+      <!-- ####################################################################################################### -->
+      <!-- slider section begin here -->
+      <section
+        class="relative md:inset-0 flex justify-center items-center h-auto overflow-hidden"
+      >
+
+      <slider-control_desktop class="max-md:hidden w-screen ff section_img">
+    <img id="sliderImageDesktop" src="./image/slide-1.png" alt="a man writing on a transparent board wall" />
+    <slider-button class="right-0 bottom-0 absolute flex flex-col justify-center items-center gap-2 md:mx-24">
+        <div class="flex justify-center items-baseline space-x-8 md:space-y-4 py-4 text-4xl text-tertiary">
+            <button class="cursor-pointer" onclick="changeSlide('slider-control_desktop', -1)">
+                <span class="drop-shadow-lg text-gray-400 hover:text-tertiary active:text-primary">〈</span>
+            </button>
+            <button class="cursor-pointer" onclick="changeSlide('slider-control_desktop', 1)">
+                <span class="drop-shadow-lg active:text-primary">〉</span>
+            </button>
+        </div>
+        <div class="space-x-4 max-md:hidden pb-2">
+            <button id="slideSelect1" class="bg-gray-300 hover:bg-gray-300 active:bg-primary rounded-md w-10 h-2 transition duration-200 ease-in-out" onclick="selectSlide('slider-control_desktop', 0)"></button>
+            <button id="slideSelect2" class="bg-gray-500 hover:bg-gray-300 active:bg-primary rounded-md w-10 h-2 transition duration-200 ease-in-out" onclick="selectSlide('slider-control_desktop', 1)"></button>
+        </div>
+    </slider-button>
+</slider-control_desktop>
+
+<slider-control_mobile class="md:hidden w-screen">
+    <img id="sliderImageMobile" class="bg-no-repeat w-full h-[504px] object-center object-cover" src="./image/slide-1-mobile.png" alt="a man writing on a transparent board wall" />
+    <slider-button class="right-0 bottom-0 absolute flex flex-col justify-center items-center gap-2">
+        <div class="flex justify-center items-baseline space-x-8 py-4 text-4xl text-tertiary">
+            <button class="cursor-pointer" onclick="changeSlide('slider-control_mobile', -1)">
+                <span class="drop-shadow-lg text-gray-400 hover:text-tertiary active:text-primary"  >〈</span>
+            </button>
+            <button class="cursor-pointer" onclick="changeSlide('slider-control_mobile', 1)">
+                <span class="drop-shadow-lg active:text-primary">〉</span>
+            </button>
+        </div>
+    </slider-button>
+</slider-control_mobile>
+
+
+        <center-group
+          class="absolute flex flex-col justify-center items-center md:items-start gap-4 m-auto md:ml-[32rem]"
+        >
+          <h1
+            id="textChanged"
+            class="font-bold font-riftB text-2xl text-center text-primary md:text-5xl md:text-left"
+          >
+            We never stop <br class="md:hidden" />
+            looking <br class="max-md:hidden" />
+            for great <br class="md:hidden" />
+            talent.
+          </h1>
+          <button
+            class="flex items-baseline bg-tertiary hover:bg-secondary active:bg-primary shadow-lg px-2 py-2 font-bold font-riftB text-primary text-xs hover:text-tertiary uppercase"
+          >
+            learn more
+            <span class="ml-2"> 〉 </span>
+          </button>
+        </center-group>
+      </section>
+      <!-- slider section ends here  -->
+    </wrapper-head>
+    <!-- ####################################################################################################### -->
+
+    <!-- ####################################################################################################### -->
+    <!-- middle section begins here  -->
+    <article
+      class="flex flex-col flex-auto justify-center items-center m-8 md:px-[5rem] md:pb-[1rem] text-center text-primary md:text-left"
+    >
+      <article-title
+        class="flex flex-col md:mt-[1rem] font-bold font-riftB text-[1.25rem] md:text-3xl"
+      >
+        <h2>Benefits of joining the team</h2>
+        <hr
+          class="border-0 bg-extra md:bg-gray-400 mx-auto my-4 md:my-10 rounded w-[3rem] h-[0.2rem]"
+        />
+      </article-title>
+
+      <benefits-list
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 font-normal font-riftM text-[1.2rem] md:text-[1rem] md:text-left uppercase leading-relaxed"
+      >
+        <benfits-item class="centered">
+          <img src="./image/money.png" alt="" />
+          <p>competitive pay & overtime</p>
+        </benfits-item>
+        <benfits-item class="centered">
+          <img src="./image/medical.png" alt="" />
+          <p>health insurance options</p>
+        </benfits-item>
+        <benfits-item class="centered">
+          <img src="./image/piggy-bank.png" alt="" />
+          <p>401k matching program</p>
+        </benfits-item>
+        <benfits-item class="centered">
+          <img src="./image/sun.png" alt="" />
+          <p>pto and paid holidays</p>
+        </benfits-item>
+        <benfits-item class="centered">
+          <img src="./image/trophy.png" alt="" />
+          <p>monthly rewards & team building</p>
+        </benfits-item>
+        <benfits-item class="centered">
+          <img src="./image/mug.png" alt="" />
+          <p>free snacks and beverages</p>
+        </benfits-item>
+        <benfits-item class="centered">
+          <img src="./image/ping-pong.png" alt="" />
+          <p>fjing fjong (trust us you'll love it)</p>
+        </benfits-item>
+        <benfits-item class="centered">
+          <img src="./image/apple.png" alt="" />
+          <p>
+            multiscreen <br />
+            workspace & macbook
+          </p>
+        </benfits-item>
+      </benefits-list>
+    </article>
+    <!-- middle section ends here -->
+    <!-- ####################################################################################################### -->
+
+    <!-- ####################################################################################################### -->
+    <!-- footer begins here  -->
+    <footer
+      class="flex flex-col justify-center items-center bg-gradient-to-b from-primary to-secondary w-screen h-[5.5rem] md:h-[4rem]"
+    >
+      <footer-logo>
+        <img src="./image/logo-alternate.png" alt="" />
+      </footer-logo>
+    </footer>
+    <!-- footer ends here -->
+    <!-- ####################################################################################################### -->
+  </body>
+  <script src="./production/script.min.js"></script>
+</html>

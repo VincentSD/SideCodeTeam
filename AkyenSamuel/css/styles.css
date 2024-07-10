@@ -1,0 +1,38 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.mainpage {
+    width: calc(97.9vw - 2rem);
+    height: calc(95vh - 2rem);
+    background-image: url(/team-pages/AkyenSamuel/image/slide-1.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+
+.logo {
+    background-image: url(/team-pages/AkyenSamuel/image/logo.png);
+    height: 50px;
+    width: 50px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;    margin:1.5rem 10rem;
+    border-color: aqua;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+}
