@@ -17,7 +17,6 @@ This document outline is adopted from Fjorge Front-End-Learning for Beginners
 ## Resources
 ### Downloads
 - [Design reference](https://xd.adobe.com/view/d18f336f-9717-4ea4-a962-897462c2c80e-84dc/grid/)
-- Request to be added to the project board to access project tickets and milestones that will guide you to completion of this project
 
 ## Learning
 ### What done means
@@ -27,4 +26,4 @@ This document outline is adopted from Fjorge Front-End-Learning for Beginners
   - Javascript
 - The Front End Test is incrementally worked on and reviewed by a team mate that has advanced Front End capabilities
 - The Front End Test is finalized and approved as completed by a team mate with advanced Front End capabilities
-  - Web page matches the design provide for desktop and mobile
+- Web page matches the design provide for desktop and mobile
