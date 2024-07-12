@@ -10,24 +10,15 @@ const nextButton = document.querySelector('.next');
 const prevButton = document.querySelector('.prev');
 const textbox = document.querySelector('.textbox');
 const button  = document.querySelector('.button');
-<<<<<<< HEAD
 const indicators = document.querySelectorAll('.indicator');
 
 nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     updateSlider();
-=======
-
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    header.style.backgroundImage = `url(${images[currentIndex]})`;
-    updateVisibility();
->>>>>>> origin/peter
 });
 
 prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
-<<<<<<< HEAD
     updateSlider();
 });
 
@@ -36,11 +27,6 @@ function updateSlider() {
     updateVisibility();
     updateIndicators();
 }
-=======
-    header.style.backgroundImage = `url(${images[currentIndex]})`;
-    updateVisibility();
-});
->>>>>>> origin/peter
 
 function updateVisibility() {
     if (currentIndex === 0) {
@@ -52,7 +38,6 @@ function updateVisibility() {
     }
 }
 
-<<<<<<< HEAD
 function updateIndicators() {
     indicators.forEach((indicator, index) => {
         if (index === currentIndex) {
@@ -72,8 +57,6 @@ indicators.forEach(indicator => {
 });
 
 // Menu toggle for mobile
-=======
->>>>>>> origin/peter
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -100,9 +83,6 @@ document.addEventListener('click', (e) => {
         document.body.style.overflow = ''; // Enable scrolling
     }
 });
-<<<<<<< HEAD
 
 // Initial setup
 updateSlider();
-=======
->>>>>>> origin/peter

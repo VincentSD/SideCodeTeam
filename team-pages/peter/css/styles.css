@@ -79,11 +79,7 @@ hr {
 
 .slider-controls button {
     background-color:transparent;
-<<<<<<< HEAD
     color: lightgray;
-=======
-    color: white;
->>>>>>> origin/peter
     border: none;
     padding: 10px;
     margin: 5px;
@@ -100,7 +96,6 @@ hr {
     color: white;
 
 }
-<<<<<<< HEAD
 .page-indicators {
     display: flex;
     justify-content: center;
@@ -119,8 +114,6 @@ hr {
 .indicator.active {
     background-color: #333;
 }
-=======
->>>>>>> origin/peter
 
 .benefits {
     text-align: center;

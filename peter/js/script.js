@@ -10,18 +10,23 @@ const nextButton = document.querySelector('.next');
 const prevButton = document.querySelector('.prev');
 const textbox = document.querySelector('.textbox');
 const button  = document.querySelector('.button');
+const indicators = document.querySelectorAll('.indicator');
 
 nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
-    header.style.backgroundImage = `url(${images[currentIndex]})`;
-    updateVisibility();
+    updateSlider();
 });
 
 prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateSlider();
+});
+
+function updateSlider() {
     header.style.backgroundImage = `url(${images[currentIndex]})`;
     updateVisibility();
-});
+    updateIndicators();
+}
 
 function updateVisibility() {
     if (currentIndex === 0) {
@@ -33,6 +38,25 @@ function updateVisibility() {
     }
 }
 
+function updateIndicators() {
+    indicators.forEach((indicator, index) => {
+        if (index === currentIndex) {
+            indicator.classList.add('active');
+        } else {
+            indicator.classList.remove('active');
+        }
+    });
+}
+
+// Handle indicator click
+indicators.forEach(indicator => {
+    indicator.addEventListener('click', (e) => {
+        currentIndex = parseInt(e.target.getAttribute('data-index'));
+        updateSlider();
+    });
+});
+
+// Menu toggle for mobile
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -59,3 +83,6 @@ document.addEventListener('click', (e) => {
         document.body.style.overflow = ''; // Enable scrolling
     }
 });
+
+// Initial setup
+updateSlider();
