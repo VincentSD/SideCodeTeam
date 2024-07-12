@@ -1,6 +1,6 @@
 const images = [
-    '../image/slide-1.png',
-    '../image/slide-2.png'
+    '/image/slide-1.png',
+    '/image/slide-2.png'
 ];
 
 let currentIndex = 0;
