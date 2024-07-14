@@ -59,8 +59,8 @@ body {
 }
 
 .logo-image {
-  height: 47px;
-  width: 69px;
+  height: 67px;
+  width: 89px;
 }
 
 nav {
@@ -82,28 +82,26 @@ nav {
   position: relative;
   margin-left: 60px;
 }
+
 .nav_links ul li a {
   color: white;
   text-decoration: none;
   font-size: 24px;
   font-weight: 450;
+  transition: font-size 0.3s ease; /* Add transition for smooth font-size change */
 }
 
-.nav_links ul li ::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: #014152;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
+.nav_links ul li:hover a {
+  font-size: 28px; /* Adjust the font size as needed for the hover effect */
 }
-.nav_links ul li:hover ::after {
-  width: 100%;
-  align-items: center;
+
+/* Remove the underline effect */
+.nav_links ul li::after {
+  display: none;
 }
 
 .navigation {
+  border: none;
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -112,33 +110,68 @@ nav {
   margin-right: 250px;
 }
 
-.navigation button {
+.navigation span {
+  background-color: transparent;
   border: none;
-  color: #014152;
-  padding: 10px;
+  color: white;
+  padding: 5px 9px; /* Adjust padding to make the buttons thinner */
   cursor: pointer;
-  height: 5em;
-  width: 8em;
-  transition: background-color 0.3s;
+  font-weight: lighter;
+  font-size: 44px;
+  transition: color 0.3s;
   margin-bottom: 30px;
+  height: 2em; /* Increase height to make the buttons taller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-.navigation button:hover {
-  background-color: #014152;
+
+.navigation span:hover {
   color: white;
 }
 
-.navigation.slide-2 button {
-  background-color: #014152;
+.navigation.slide-2 span {
   color: white;
 }
 
-.navigation.slide-2 button:hover {
+.navigation.slide-2 span:hover {
+  color: white;
+}
+
+.whitebars-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  margin-left: 570px;
+}
+
+.whitebars1 {
+  width: 45px; /* Adjust width as needed */
+  height: 3px; /* Adjust height as needed */
+  background-color: rgba(219, 236, 250, 0.356);
+  display: inline-block;
+}
+.whitebars2 {
+  width: 45px; /* Adjust width as needed */
+  height: 3px; /* Adjust height as needed */
+  background-color: rgba(219, 236, 250, 0.356);
+  display: inline-block;
+}
+.whitebars3 {
+  width: 45px; /* Adjust width as needed */
+  height: 3px; /* Adjust height as needed */
   background-color: white;
-  color: #014152;
+  display: inline-block;
 }
 
-.textbox {
+
+.textbox { 
   margin-top: 20px;
   display: flex;
   justify-content: center;

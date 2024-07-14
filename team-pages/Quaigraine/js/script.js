@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         // Hide menu and change icon back to closed state
         menu.style.display = "none";
-        navIcon.innerHTML = '<i class="fa-solid fa-bars-staggered fa-2xl"></i>';
+        navIcon.innerHTML = '<i class="fa-solid fa-bars fa-2xl"></i>';
         // Re-enable scrolling
         document.body.style.overflow = "";
       }
