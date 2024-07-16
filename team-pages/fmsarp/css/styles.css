@@ -10,14 +10,21 @@ body, html {
 }
 
 #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 30px 0;
-    transition: background 0.5s ease;
-    text-align: right;
-    
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 30px 0;
+  transition: background 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.logo {
+  text-align: left;
+  margin-left: 100px; /* Adjust as needed */
 }
 
 nav ul {
@@ -45,6 +52,13 @@ nav ul li a:hover {
   max-width: 100%;
   position: relative;
   margin: auto;
+}
+
+.imagetext {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
 }
 
 /* Hide the images by default */
@@ -90,6 +104,22 @@ nav ul li a:hover {
   text-align: center;
 }
 
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -100,6 +130,45 @@ nav ul li a:hover {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+#about {
+  padding: 20px;
+  text-align: center;
+}
+
+#about h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-container img {
+  max-width: 100px; /* Adjust the size of the images as needed */
+  margin-bottom: 10px;
+}
+
+.image-container p {
+  margin: 0;
+  font-weight: bold;
+}
+
 
 footer {
     background-color: #333;
