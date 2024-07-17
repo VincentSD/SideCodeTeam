@@ -6,81 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fjorge</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 </head>
 
 <body>
-    <nav id="navbar">
-        <img src="./image/logo.png" alt="logo" class="logo">
-        <ul>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-    <section id="work"><a href="#work" target="_blank"></a>
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
+    <div class="wrapper">
+        <nav class="navbar">
+            <img src="./image/logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section id="work"><a href="#work" target="_blank"></a>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
 
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <img src="image/slide-1.png" style="width:100%">
-                <div class="imagetext">
-                    <p>We never stop looking for great talent.</p>
-                    <button>LEARN MORE</button>
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="image/slide-1.png">
+                    <div class="imagetext">
+                        <p>We never stop looking for great talent.</p>
+                        <button>LEARN MORE<i class="fa-solid fa-angle-right"></i></button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="mySlides fade">
-                <img src="image/slide-2.png" style="width:100%">
-                <div class="text">Caption Two</div>
+                <div class="mySlides fade">
+                    <img src="image/slide-2.png" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- The dots/circles -->
             </div>
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <!-- The dots/circles -->
-        </div>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
-    </section>
-    <section id="about">
-        <h1>Benefits of joing the team</h1>
-        <div class="about-container">
-            <div class="image-container">
-                <img src="image/money.png" alt="Proud Coder" id="image1">
-                <p>COMPETITVE SALARY & OVERTIME</p>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
-            <div class="image-container">
-                <img src="image/medical.png" alt="Proud Coder" id="image1">
-                <p>HEALTH INSURANCE OPTIONS</p>
-            </div>
-            <div class="image-container">
-                <img src="image/piggy-bank.png" alt="Proud Coder" id="image1">
-                <p>401K MATCHING PROGRAM</p>
-            </div>
-            <div class="image-container">
-                <img src="image/sun.png" alt="Proud Coder" id="image1">
-                <p>PTO AND PAID HOLIDAYS</p>
-            </div>
-            <div class="image-container">
-                <img src="image/trophy.png" alt="Proud Coder" id="image1">
-                <p>MONTHLY REWARDS & TEAM BUILDING</p>
-            </div>
-            <div class="image-container">
-                <img src="image/mug.png" alt="Proud Coder" id="image1">
-                <p>FREE SNACKS ANND BEVERAGES</p>
-            </div>
-            <div class="image-container">
-                <img src="image/ping-pong.png" alt="Proud Coder" id="image1">
-                <p>FJING FJONG (TRUST US YOU'LL LOVE IT)</p>
-            </div>
-            <div class="image-container">
-                <img src="image/apple.png" alt="Proud Coder" id="image1">
-                <p>MULTISCREEN WORKSPACE & MACBOOK</p>
-            </div>
-    </section>
+        </section>
+        <section id="about">
+            <h1>Benefits of joing the team</h1>
+            <div class="about-container">
+                <div class="image-container">
+                    <img src="image/money.png" alt="Proud Coder" id="image1">
+                    <p>COMPETITVE SALARY & OVERTIME</p>
+                </div>
+                <div class="image-container">
+                    <img src="image/medical.png" alt="Proud Coder" id="image1">
+                    <p>HEALTH INSURANCE OPTIONS</p>
+                </div>
+                <div class="image-container">
+                    <img src="image/piggy-bank.png" alt="Proud Coder" id="image1">
+                    <p>401K MATCHING PROGRAM</p>
+                </div>
+                <div class="image-container">
+                    <img src="image/sun.png" alt="Proud Coder" id="image1">
+                    <p>PTO AND PAID HOLIDAYS</p>
+                </div>
+                <div class="image-container">
+                    <img src="image/trophy.png" alt="Proud Coder" id="image1">
+                    <p>MONTHLY REWARDS & TEAM BUILDING</p>
+                </div>
+                <div class="image-container">
+                    <img src="image/mug.png" alt="Proud Coder" id="image1">
+                    <p>FREE SNACKS ANND BEVERAGES</p>
+                </div>
+                <div class="image-container">
+                    <img src="image/ping-pong.png" alt="Proud Coder" id="image1">
+                    <p>FJING FJONG (TRUST US YOU'LL LOVE IT)</p>
+                </div>
+                <div class="image-container">
+                    <img src="image/apple.png" alt="Proud Coder" id="image1">
+                    <p>MULTISCREEN WORKSPACE & MACBOOK</p>
+                </div>
+        </section>
+    </div>
     <footer>
         <img src="image/logo-alternate.png" alt="footer logo">
     </footer>
