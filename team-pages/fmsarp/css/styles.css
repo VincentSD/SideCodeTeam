@@ -69,8 +69,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
@@ -113,16 +111,16 @@ nav ul li a:hover {
   border: none;
   font: normal bold 10px/17px "Playwrite DE Grund", sans-serif;
   color: var(--unnamed-color-003e52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-button.fa-solid {
-position: absolute;
-top: 359px;
-left: 746px;
-width: 7px;
-height: 10px;
-transform: matrix(0, -1, 1, 0, 0, 0);
-opacity: 1;
+button .fa-solid {
+  margin-left: 15px;
+  /* Adjust the margin as needed */
+  font-size: 16px;
 }
 
 
@@ -130,10 +128,10 @@ opacity: 1;
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  bottom: 5px;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  margin: 30px;
+  padding: 20px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -142,10 +140,16 @@ opacity: 1;
   user-select: none;
 }
 
+
+.prev {
+  right: 150px;
+  font-size: 30px;
+}
+
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right: 105px;
+  font-size: 30px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -153,31 +157,29 @@ opacity: 1;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+.dot-container {
+  text-align: right;
   position: absolute;
-  bottom: 8px;
   width: 100%;
-  text-align: center;
+  bottom: 20px;
+  right: 150px;
 }
 
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+  height: 4px;
+  width: 40px;
+  margin: 0 5px;
+  background-color: white;
   display: inline-block;
   transition: background-color 0.6s ease;
+  opacity: 0.35;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: white;
+  opacity: 1;
 }
 
 /* Fading animation */
@@ -234,7 +236,6 @@ opacity: 1;
   margin: 0;
   font-weight: bold;
 }
-
 
 footer {
   background-color: #333;
