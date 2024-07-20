@@ -1,0 +1,391 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-image: url(./image/slide-1.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 84vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.header img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+hr {
+    border: 0;
+    background-color: grey;
+    margin: 2.5rem auto;
+    width: 3rem;
+    height: 0.2rem;
+    border-radius: 5px;
+
+
+}
+
+.textbox {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 170px;
+    transform: translateY(-50%);
+    text-align: left;
+    padding: 20px;
+    background: none; 
+}
+
+.textbox h1 {
+    font-size: 40px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: rgb(4, 46, 46); 
+}
+.button{
+    position: absolute;
+    top: 67%;
+    right: 479px;
+    transform: translateY(-50%);
+    text-align: left;
+    padding: 8px;
+    background-color: ghostwhite;
+    font-size: larger;
+    font-weight: bold;
+    color:#003E52;
+    
+    
+}
+.button:hover{
+    background-color: white;
+    font-size: larger;
+    font-weight: bolder;
+    
+}
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.slider-controls button {
+    background-color:transparent;
+    color: lightgray;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.slider-controls button:hover {
+    background-color: none;
+    text-decoration-color: white;
+    text-shadow: 50px;
+    text-decoration: solid;
+    text-rendering: auto;
+    color: white;
+
+}
+.page-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    width: 30px; /* Adjust the width as needed */
+    height: 5px;  /* Adjust the height as needed */
+    margin: 0 5px;
+    background-color: #ddd;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+.benefits {
+    text-align: center;
+    margin: 20px 0;
+    color: #003E52; 
+}
+
+.benefits h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.benefit-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px 10px;
+    padding: 10px 120px 20px;
+}
+
+.benefit-item {
+    flex: 1 1 calc(25% - 40px); /* 25% width minus the gap */
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+}
+
+.benefit-item img {
+    max-width: 100px; 
+    margin-bottom: 20px;
+}
+
+.benefit-item h4 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color:#003E52; /* Ensure text color matches the textbox */
+}
+
+footer {
+    margin-top: 90px;
+    text-align: center;
+    padding: 20px;
+    background-color:#003E52;
+    color: white;
+}
+
+footer img {
+    max-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        background-image: url(./image/slide-1-mobile.png);
+        background-size: cover;
+        background-position: center;
+        min-height: 84vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: background-image 0.5s ease-in-out;
+    }
+    .textbox {
+        display:flex;
+        top: 40%;
+        flex-wrap: wrap;
+        width: 200px;
+        height: 92px;
+        
+    }
+
+    .textbox h1 {
+        font-size: 30px;
+    }
+
+    .benefit-grid {
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .benefit-item {
+        flex: 1 1 calc(50% - 20px); /* 50% width minus the gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        background-image: url(./image/slide-1-mobile.png);
+    }
+    .textbox {
+        top: 40%;
+        padding: 80px;
+        display: inline-block;
+        position: absolute;
+        right: 5%;
+        transform: translateY(-50%);
+        text-align: center;
+        background: none; 
+    }
+
+    .textbox h1 {
+        font-size: 24px;
+    }
+
+    .benefit-grid {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .benefit-item {
+        flex: 1 1 100%; /* Full width */
+    }
+    .button{
+        display: block;
+        top: 54%;
+        right: 48px;
+        padding-top: 9px;
+        padding-right: 9px;
+        padding-bottom: 9px;
+        padding-left: 9px;
+        margin-right: 104px;
+        border-top-width: 0px;
+        border-top-style: solid;
+        border-bottom-width: 0px;
+        border-bottom-style: solid;
+        border-left-width: 0px;
+        border-left-style: solid;
+        border-right-width: 0px;
+        border-right-style: solid;
+    }
+    
+}
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color:none;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    max-height: 40px; /* Adjust as needed */
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: transparent;
+    text-decoration-color: white;
+    text-shadow: 50px;
+    text-decoration: solid;
+    text-rendering: auto;
+    color: white;
+}
+
+.menu-toggle {
+    display: none; /* Hide by default on desktop */
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu items on smaller screens */
+        flex-direction: column;
+        background-color: #003E52;
+        position: fixed; /* Change to fixed to cover the whole screen */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Make it fill the whole screen */
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 999; /* Ensure it is on top of other content */
+    }
+
+    .menu.active {
+        display: flex; /* Show menu items when active */
+        padding-right: 6rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle on smaller screens */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1000; /* Ensure it stays on top */
+    }
+
+    .menu-toggle.active {
+        color: #fff; /* Change color when menu is active */
+    }
+
+    .menu li {
+        margin: 20px 0; /* Add spacing between menu items */
+    }
+
+    .menu li a {
+        font-size: 24px; /* Increase font size for better visibility */
+    }
+}
+/* Responsive design for mobile and tablet */
+@media (max-width: 1024px) { /* Tablet and below */
+    .logo{
+        z-index: 9999;
+    }
+    .menu {
+        display: none; /* Hide menu items on smaller screens */
+        flex-direction: column;
+        background-color: #003E52;
+        position: fixed; /* Change to fixed to cover the whole screen */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Make it fill the whole screen */
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 999; /* Ensure it is on top of other content */
+    }
+
+    .menu.active {
+        display: flex; /* Show menu items when active */
+        padding: 10rem;
+        padding-right: 6rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle on smaller screens */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1000; /* Ensure it stays on top */
+    }
+
+    .menu-toggle.active {
+        color: #fff; /* Change color when menu is active */
+    }
+
+    .menu li {
+        margin: 20px 0; /* Add spacing between menu items */
+    }
+
+    .menu li a {
+        font-size: 24px; /* Increase font size for better visibility */
+    }
+}
+

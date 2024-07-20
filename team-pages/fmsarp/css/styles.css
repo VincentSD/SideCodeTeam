@@ -1,0 +1,247 @@
+:root {
+  /* Colors: */
+  --unnamed-color-ffffff: #FFFFFF;
+  --unnamed-color-003e52: #003E52;
+  --unnamed-color-ee7623: #EE7623;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+html {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: 1334px;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.logo {
+  text-align: left;
+  margin-left: 300px;
+  /* Adjust as needed */
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  right: 130px;
+  z-index: 10;
+  padding: 30px 0;
+  transition: background 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides img {
+  width: 100%;
+}
+
+.imagetext p {
+  /* Layout Properties */
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 510px;
+  height: 110px;
+  /* UI Properties */
+  color: var(--unnamed-color-003e52);
+  text-align: left;
+  font: normal normal bold 42px/52px 'Montserrat', sans-serif;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.imagetext button {
+  position: absolute;
+  top: 67%;
+  left: 58.7%;
+  transform: translate(-50%, -50%);
+  width: 115px;
+  height: 32px;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  border: none;
+  font: normal bold 10px/17px "Playwrite DE Grund", sans-serif;
+  color: var(--unnamed-color-003e52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button .fa-solid {
+  margin-left: 15px;
+  /* Adjust the margin as needed */
+  font-size: 16px;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  width: auto;
+  margin: 30px;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.prev {
+  right: 150px;
+  font-size: 30px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 105px;
+  font-size: 30px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot-container {
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  right: 150px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 4px;
+  width: 40px;
+  margin: 0 5px;
+  background-color: white;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  opacity: 0.35;
+}
+
+.active, .dot:hover {
+  background-color: white;
+  opacity: 1;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+#about {
+  padding: 20px;
+  text-align: center;
+}
+
+#about h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  max-width: 100px;
+  /* Adjust the size of the images as needed */
+  margin-bottom: 10px;
+}
+
+.image-container p {
+  margin: 0;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Rift-Bold';
+    font-display: swap;
+    src: url('./fonts/Rift/Fort\ Foundry\ -\ Rift-Bold.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Rift-Light';
+    font-display: swap;
+    src: url('./fonts/Rift/Fort\ Foundry\ -\ Rift-Light.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Rift-Medium';
+    font-display: swap;
+    src: url('./fonts/Rift/Fort\ Foundry\ -\ Rift-Medium.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Rift-Regular';
+    font-display: swap;
+    src: url('./fonts/Rift/Fort\ Foundry\ -\ Rift-Regular.otf') format('opentype');
+  }
+}
+
+[x-cloak] { display: none !important; }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* @layer component {
+  .centered {
+    @apply flex flex-col flex-auto justify-center items-center;
+  }
+} */
+
+/* Define a fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Apply the animation to all images within a specific container */
+.ff img {
+  animation-name: fadeIn;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards; /* Ensures the end state persists */
+  opacity: 1; /* Ensure images are fully opaque after animation */
+}
+
+.centered {
+  @apply flex flex-col flex-auto justify-center items-center p-[2rem] md:items-baseline;
+}
+
+.section_img > img {
+  @apply md:w-screen object-cover object-center;
+}
