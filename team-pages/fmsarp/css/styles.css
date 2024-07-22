@@ -8,8 +8,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
 
-html {
-  box-sizing: border-box
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -207,13 +207,20 @@ button .fa-solid {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--unnamed-color-003e52);
+  text-align: center;
+  font: normal normal bold 28px/34px 'Montserrat', sans-serif;
+  letter-spacing: 0px;
+  color: #003E52;
+  opacity: 1;
 }
 
 .about-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-items: center;
+  top: 696px;
+  left: 137px;
+  width: 1006px;
+  height: 475px;
+  display: flex;
 }
 
 .image-container {
@@ -221,20 +228,27 @@ button .fa-solid {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Adjust spacing between containers */
+  justify-items: center;
+  flex: 1 1 200px; /* Adjust the basis value to control the minimum width */
+  max-width: 250px; /* Optional, to limit the maximum width of each image container */
+  box-sizing: border-box;
 }
 
 .image-container img {
   max-width: 100px;
   /* Adjust the size of the images as needed */
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .image-container p {
-  margin: 0;
   font-weight: bold;
+  text-align: left;
+  color: var(--unnamed-color-003e52);
+font: normal normal normal 24px/32px Rift;
+letter-spacing: 1.92px;
+opacity: 1;
 }
 
 footer {
